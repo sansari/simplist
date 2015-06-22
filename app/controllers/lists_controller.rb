@@ -11,7 +11,8 @@ class ListsController < ApplicationController
   # GET /lists/1.json
   def show
     @new_item = @list.items.new
-    @items = @list.items.all
+    @active_items = @list.items.active
+    @done_items = @list.items.done
   end
 
   # GET /lists/new

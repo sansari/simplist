@@ -10,7 +10,8 @@
   </div>
 
   <div class="items-list">
-    <%= render(:partial => 'items/item', :collection => @items) %>
+    <%= render(:partial => 'items/item', :collection => @active_items) %>
+    <%= render(:partial => 'items/item', :collection => @done_items) %>
   </div>
 
 </div>

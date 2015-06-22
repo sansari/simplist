@@ -3,7 +3,7 @@ class CreateItems < ActiveRecord::Migration
     create_table :items do |t|
       t.integer :list_id
       t.string :title
-      t.boolean :done
+      t.boolean :done, :default => false
 
       t.timestamps null: false
     end
