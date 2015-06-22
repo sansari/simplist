@@ -28,6 +28,7 @@ class ItemsController < ApplicationController
 
     respond_to do |format|
       if @item.save
+        format.js
         format.html { redirect_to @item.list }
         format.json { render :show, status: :created, location: @item }
       else
