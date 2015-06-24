@@ -9,6 +9,21 @@ a, a:hover, a:visited {
   text-decoration: none !important;
 }
 
+#sound-toggle {
+  width: 32px;
+  height: 32px;
+  position: fixed;
+  left: 15px;
+  bottom: 15px;
+  background: url('sound-on.png');
+  cursor: pointer;
+  opacity: 0.5;
+
+  &.sound-off {
+    background: url('sound-off.png');
+  }
+}
+
 .list-container {
   margin: 0px auto;
   text-align: center;

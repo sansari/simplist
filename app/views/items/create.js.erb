@@ -12,3 +12,6 @@ dynamics.animate(newItem, {
 });
 
 $('#item_title').val("");
+dynamics.setTimeout(function() {
+  $('#create-sound')[0].play();
+}, 250);
