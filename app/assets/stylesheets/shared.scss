@@ -12,15 +12,19 @@ a, a:hover, a:visited {
 .list-container {
   margin: 0px auto;
   text-align: center;
-  width: 400px;
+  width: 500px;
+
+  h1 {
+    color: #ccc;
+  }
 
   .new-item-form {
-    margin-top: 50px;
+    margin-top: 80px;
     border-bottom: 1px solid #ccc;
 
     input[type='text'] {
       outline: 0;
-      font-size: 30px;
+      font-size: 50px;
       text-align: center;
       background-color: transparent;
       border: 0px;
@@ -28,7 +32,7 @@ a, a:hover, a:visited {
   }
 
   .items-list {
-    margin-top: 50px;
+    margin-top: 80px;
     .item {
       margin-top: 5px;
       padding: 10px 0;
@@ -36,6 +40,12 @@ a, a:hover, a:visited {
       background-color: #2980B9;
       font-size: 30px;
       color: #fff;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+
+      a {
+        display: block;
+      }
 
       a, a:hover, a:visited {
         color: #fff;

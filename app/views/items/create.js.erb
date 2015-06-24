@@ -1,2 +1,14 @@
-$("<%= escape_javascript(render @item) %>").prependTo(".items-list");
+$("<%= escape_javascript(render @item) %>").css('opacity', 0).css('scale', 0).css({"-webkit-transform":"translate(0px,-100px)"}).prependTo(".items-list");
+
+var newItem = document.querySelector('.item');
+dynamics.animate(newItem, {
+  opacity: 1,
+  scale: 1
+}, {
+  type: dynamics.gravity,
+  bounciness: 600,
+  elasticity: 200,
+  duration: 700
+});
+
 $('#item_title').val("");

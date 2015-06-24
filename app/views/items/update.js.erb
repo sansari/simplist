@@ -1,1 +1,31 @@
-$('#item-<%=@item.id%>').html('<%=j render(@item)%>');
+var item = document.querySelector('#item-<%=@item.id%>');
+var items = document.querySelectorAll('.item');
+var itemIndex = $('.item').index(item);
+
+dynamics.animate(item, {
+  translateX: 1000
+}, {
+  type: dynamics.spring,
+  duration: 400,
+  frequency: 58,
+  friction: 114,
+  anticipationSize: 505,
+  anticipationStrength: 93,
+  complete: function() {
+      for(var i=itemIndex+1; i < items.length; i++) {
+          dynamics.animate(items[i], {
+            translateY: -69
+          }, {
+            type: dynamics.spring,
+            frequency: 200,
+            friction: 200,
+            duration: 500,
+            delay: 50*i
+          });  
+      }
+      dynamics.setTimeout(function() {
+        $('.item').removeAttr('style');
+        $(item).remove();
+      }, 1000);
+  }
+});

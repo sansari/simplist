@@ -2,8 +2,7 @@
 
 <div class="list-container">
 
-  <h1><%= @list.name %></h1>
-
+  <h1>simplist</h1>
 
   <div class="new-item-form">
     <%=render partial: 'items/form', :locals => {:item => @new_item}%>
@@ -11,7 +10,6 @@
 
   <div class="items-list">
     <%= render(:partial => 'items/item', :collection => @active_items) %>
-    <%= render(:partial => 'items/item', :collection => @done_items) %>
   </div>
 
 </div>

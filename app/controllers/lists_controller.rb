@@ -12,7 +12,6 @@ class ListsController < ApplicationController
   def show
     @new_item = @list.items.new
     @active_items = @list.items.active
-    @done_items = @list.items.done
   end
 
   # GET /lists/new
