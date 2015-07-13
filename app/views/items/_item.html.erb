@@ -1,5 +1,5 @@
 <div id="item-<%=item.id%>" class="item <%=item.done ? "done" : "active"%>">
-  <a data-remote="true" rel="nofollow" data-method="PUT" href="<%=item_path(item, :item => {:done => true})%>">
+  <a rel="nofollow" data-method="PUT" href="<%=item_path(item, :item => {:done => true})%>">
     <div><%= item.title %></div>
   </a>
 </div>

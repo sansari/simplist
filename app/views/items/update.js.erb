@@ -26,7 +26,8 @@ dynamics.animate(item, {
           });  
       }
       dynamics.setTimeout(function() {
-        $('.item').removeAttr('style');
+        dynamics.stop(items);
+        dynamics.css(items, { translateY: 0 });
         $(item).remove();
       }, 1000);
   }
